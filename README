@@ -1,0 +1,172 @@
+🔐 Password Generator & Local Password Vault
+
+A modern password generator and local password vault built with HTML, CSS and Vanilla JavaScript.
+
+This project is part of my web development learning journey and is designed to practice real-world frontend logic, UI state management and browser storage concepts.
+
+⚠️ This tool uses LocalStorage and is meant for educational purposes only.
+Do NOT use it to store real sensitive passwords.
+
+🌐 Live Demo
+
+https://blackravenwolf.github.io/password-generator-tool/
+
+📌 Project Goals
+
+This project was built to practice:
+
+DOM manipulation
+Event handling
+Random generation logic
+Form validation
+State management
+LocalStorage usage
+Table rendering
+UI feedback patterns
+Clean UI/UX structure for future scaling
+
+The UI and architecture are intentionally designed as a buildable foundation for future features.
+
+🧠 Features
+
+🔑 Password Generator
+Adjustable password length
+Include:
+lowercase letters
+uppercase letters
+numbers
+symbols
+Real-time password strength indicator
+Copy to clipboard
+Toggle password visibility
+
+📂 Local Password Vault
+Save passwords locally in the browser
+Search by website or username
+Show / hide stored passwords
+Delete individual passwords
+Delete all passwords
+Live vault statistics:
+total passwords
+strong passwords
+weak passwords
+
+🗂️ Project Structure
+password-vault/
+
+│
+├── index.html
+│
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   │
+│   ├── js/
+│   │   └── app.js
+│   │
+│   └── images/
+│
+└── README.md
+
+The structure is kept simple and scalable to support future refactors.
+
+🚀 Future Roadmap
+
+This project is planned to evolve step-by-step.
+
+Phase 1 — UI & Logic Improvements
+
+Password strength bar visualization
+Sorting passwords
+Edit existing password entries
+Dark / Light mode toggle
+Export / Import passwords (JSON)
+
+Phase 2 — Security Learning Expansion
+
+Basic encryption experiment
+Session lock feature
+Master password concept (learning implementation)
+Password generator rules enforcement
+
+Phase 3 — Framework Migration
+
+Refactor to React
+Component-based architecture
+State management with hooks
+Better form UX
+
+Phase 4 — Full Stack Version (Long Term)
+
+Node.js backend
+Database storage
+Authentication system
+Multi-device password sync
+Secure hashing & encryption concepts
+
+This roadmap reflects my growth path toward full stack development and security awareness.
+
+🛠️ Technologies Used
+
+HTML5
+CSS3
+Vanilla JavaScript
+Browser LocalStorage API
+
+No frameworks were used intentionally to strengthen core fundamentals.
+
+🎯 Learning Focus
+
+This project focuses on understanding:
+
+how random password generation works
+how browser storage behaves
+how UI state updates after user actions
+how dynamic table rendering works
+how to structure scalable frontend projects
+how to build portfolio-ready learning projects
+
+⚠️ Security Disclaimer
+
+This project is a learning tool.
+
+Passwords are stored:
+
+unencrypted
+locally in the browser
+accessible via developer tools
+
+Never use this application for real password management.
+
+📄 License
+
+This project is licensed under the MIT License.
+
+See the full license here:
+👉 https://github.com/BlackRavenWolf/password-generator-tool/blob/main/LICENSE
+
+👨‍💻 Author
+
+Dominique Striekwold
+
+Aspiring Full Stack Developer focused on:
+
+JavaScript fundamentals
+real project building
+UI/UX logic
+future backend & security skills
+
+GitHub:
+👉 https://github.com/BlackRavenWolf
+
+⭐ Why This Project Matters
+
+This project represents:
+
+practical frontend engineering
+structured learning progression
+real feature logic implementation
+security awareness from early stages
+portfolio-ready documentation
+
+It is designed not as a toy project, but as a foundation for future scalable applications.
