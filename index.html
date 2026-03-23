@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Vault | Local Password Manager</title>
+    <meta
+      name="description"
+      content="Modern local password vault built with HTML, CSS and JavaScript."
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand">
+          <div class="brand-icon">🔐</div>
+          <div>
+            <p class="eyebrow">Security Learning Tool</p>
+            <h1>Password Vault</h1>
+          </div>
+        </div>
+
+        <button id="focusAddBtn" class="primary-btn sidebar-btn" type="button">
+          + Add New Password
+        </button>
+
+        <section class="stats-card">
+          <h2>Vault Stats</h2>
+          <ul class="stats-list">
+            <li>
+              <span>Total Stored</span>
+              <strong id="totalPasswords">0</strong>
+            </li>
+            <li>
+              <span>Strong</span>
+              <strong id="strongPasswords">0</strong>
+            </li>
+            <li>
+              <span>Weak</span>
+              <strong id="weakPasswords">0</strong>
+            </li>
+          </ul>
+        </section>
+
+        <section class="info-card">
+          <h2>Important</h2>
+          <p>
+            This is a <strong>learning project</strong> using
+            <strong>LocalStorage</strong>. Do not use it for real sensitive
+            passwords.
+          </p>
+        </section>
+      </aside>
+
+      <main class="main-content">
+        <header class="topbar">
+          <div>
+            <h2>Manage your local vault</h2>
+          </div>
+
+          <div class="search-wrap">
+            <input
+              id="searchInput"
+              type="search"
+              placeholder="Search website or username..."
+            />
+          </div>
+        </header>
+
+        <section class="panel form-panel">
+          <div class="panel-header">
+            <p class="eyebrow">Create New Entry</p>
+            <h3>Add New Password</h3>
+          </div>
+
+          <form id="passwordForm" class="vault-form">
+            <div class="form-grid">
+              <div class="field full">
+                <label for="website">Website</label>
+                <input
+                  id="website"
+                  type="text"
+                  placeholder="example.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="username">Username / Email</label>
+                <input
+                  id="username"
+                  type="text"
+                  placeholder="user@example.com"
+                  required
+                />
+              </div>
+
+              <div class="field">
+                <label for="password">Password</label>
+                <div class="password-input-wrap">
+                  <input
+                    id="password"
+                    type="password"
+                    placeholder="Create or paste password"
+                    required
+                  />
+                  <button
+                    id="togglePasswordBtn"
+                    class="icon-btn"
+                    type="button"
+                  >
+                    👁
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="generator-box">
+              <div class="field">
+                <label for="lengthRange">Password Length</label>
+                <div class="range-row">
+                  <input
+                    id="lengthRange"
+                    type="range"
+                    min="6"
+                    max="32"
+                    value="14"
+                  />
+                  <span id="lengthValue" class="range-value">14</span>
+                </div>
+              </div>
+
+              <div class="strength-preview">
+                <span>Strength</span>
+                <strong id="liveStrengthText">-</strong>
+              </div>
+
+              <div class="checkbox-grid">
+                <label class="check-option">
+                  <input id="includeLowercase" type="checkbox" checked />
+                  <span>Lowercase</span>
+                </label>
+
+                <label class="check-option">
+                  <input id="includeUppercase" type="checkbox" checked />
+                  <span>Uppercase</span>
+                </label>
+
+                <label class="check-option">
+                  <input id="includeNumbers" type="checkbox" checked />
+                  <span>Numbers</span>
+                </label>
+
+                <label class="check-option">
+                  <input id="includeSymbols" type="checkbox" checked />
+                  <span>Symbols</span>
+                </label>
+              </div>
+
+              <div class="generator-actions">
+                <button id="generateBtn" class="secondary-btn" type="button">
+                  Generate Password
+                </button>
+                <button id="copyGeneratedBtn" class="ghost-btn" type="button">
+                  Copy Password
+                </button>
+              </div>
+            </div>
+
+            <div class="form-actions">
+              <button id="clearFormBtn" class="ghost-btn" type="button">
+                Clear
+              </button>
+              <button class="primary-btn" type="submit">Save Password</button>
+            </div>
+          </form>
+        </section>
+
+        <section class="panel table-panel">
+          <div class="panel-header table-header">
+            <div>
+              <p class="eyebrow">Stored Entries</p>
+              <h3>Saved Passwords</h3>
+            </div>
+
+            <button id="clearAllBtn" class="danger-btn" type="button">
+              Delete All
+            </button>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Website</th>
+                  <th>Username</th>
+                  <th>Strength</th>
+                  <th>Password</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="vaultTableBody">
+                <tr>
+                  <td colspan="5" class="empty-state">
+                    No passwords stored yet.
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <footer class="footer">
+          <p>
+            © 2026 Dominique Striekwold •
+            <a
+              href="https://github.com/BlackRavenWolf/trivia-quiz/blob/main/LICENSE"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              MIT License
+            </a>
+          </p>
+          <p>
+            Password Vault — built as part of a web development learning journey
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="./assets/js/app.js"></script>
+  </body>
+</html>
