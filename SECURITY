@@ -1,0 +1,85 @@
+# Security Policy
+
+## Project Scope
+
+This project is a **local password generator and vault learning application** built with HTML, CSS and JavaScript.
+
+It is designed for:
+
+- educational purposes  
+- portfolio demonstration  
+- practicing frontend logic and browser storage  
+- learning basic security awareness  
+
+⚠️ This application is **NOT intended for real-world password storage**.
+
+Passwords are stored in **LocalStorage without encryption** and can be accessed by anyone using the same browser profile.
+
+---
+
+## Supported Versions
+
+There are currently no versioned releases.
+
+The **latest version in the main branch** is considered the only supported version.
+
+Older forks or downloaded copies may contain outdated or insecure logic.
+
+---
+
+## Known Security Limitations
+
+This project intentionally does **not implement production-level security features**, such as:
+
+- encryption of stored data  
+- authentication or user accounts  
+- secure password hashing  
+- backend storage or secure APIs  
+- protection against XSS via browser extensions  
+- device-level access protection  
+
+These limitations are part of the learning scope of this project.
+
+---
+
+## Reporting a Vulnerability
+
+If you discover a vulnerability or security concern, please report it by opening a **GitHub Issue**.
+
+Please include:
+
+- a clear description of the issue  
+- steps to reproduce  
+- expected vs actual behaviour  
+- affected file or feature  
+- browser and device information  
+- screenshots or code snippets if relevant  
+
+---
+
+## Responsible Disclosure
+
+Please **do not publicly disclose security issues** before they are reviewed.
+
+This helps prevent misuse and allows time to improve the project.
+
+---
+
+## Future Security Improvements (Planned Learning Goals)
+
+This project may evolve with future features such as:
+
+- encrypted vault storage  
+- master password protection  
+- session locking  
+- password strength analytics  
+- export/import with secure formats  
+- backend integration  
+- authentication systems  
+- secure random generation improvements  
+
+These features are part of the long-term development learning roadmap.
+
+---
+
+Thank you for helping improve this project.
